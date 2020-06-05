@@ -210,7 +210,7 @@ class ReconcileController extends Controller
                   ->setRange($selectionStart, $selectionEnd)
                   ->withBudgetInformation()->withCategoryInformation()->withAccountInformation();
         $array    = $collector->getExtractedJournals();
-        $journals = [];
+        $journalsGroups = [];
         // "fix" amounts to make it easier on the reconciliation overview:
         /** @var array $journal */
         foreach ($array as $journal) {
@@ -238,13 +238,16 @@ class ReconcileController extends Controller
             }
             // @codeCoverageIgnoreEnd
 
-            $journals[] = $journal;
+            // group journals by group 
+            $journalsGroups[$journal['transaction_group_id']]['journals'][] = $journal;
+            $journalsGroups[$journal['transaction_group_id']]['amount'] = -8.00;
+            $journalsGroups[$journal['transaction_group_id']]['foreign_amount'] = -5.80;
         }
 
         try {
             $html = view(
                 'accounts.reconcile.transactions',
-                compact('account', 'journals', 'currency', 'start', 'end', 'selectionStart', 'selectionEnd')
+                compact('account', 'journalsGroups', 'currency', 'start', 'end', 'selectionStart', 'selectionEnd')
             )->render();
             // @codeCoverageIgnoreStart
         } catch (Throwable $e) {
