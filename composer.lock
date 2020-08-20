@@ -3287,12 +3287,12 @@
             "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nrk/predis.git",
+                "url": "https://github.com/predis/predis.git",
                 "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "url": "https://api.github.com/repos/predis/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
                 "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
                 "shasum": ""
             },
@@ -3329,6 +3329,16 @@
                 "nosql",
                 "predis",
                 "redis"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/tillkruss",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/tillkruss",
+                    "type": "github"
+                }
             ],
             "time": "2016-06-16T16:22:20+00:00"
         },
@@ -8691,16 +8701,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.35",
+            "version": "0.12.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "5230eb31d546e4df7aa725894d17436cb8afd5df"
+                "reference": "ad606c5f1c641b465b739e79a3a0f1a5a57cf1b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/5230eb31d546e4df7aa725894d17436cb8afd5df",
-                "reference": "5230eb31d546e4df7aa725894d17436cb8afd5df",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/ad606c5f1c641b465b739e79a3a0f1a5a57cf1b4",
+                "reference": "ad606c5f1c641b465b739e79a3a0f1a5a57cf1b4",
                 "shasum": ""
             },
             "require": {
@@ -8743,7 +8753,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-08-04T09:48:39+00:00"
+            "time": "2020-08-19T08:13:30+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -9144,6 +9154,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-06-27T06:36:25+00:00"
         },
         {
